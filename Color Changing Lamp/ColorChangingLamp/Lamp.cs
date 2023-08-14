@@ -16,8 +16,8 @@ namespace ColorChangingLamp
         public Lamp() 
         {
             isON = false;
-            color = colorsel[0];
             sel = 0;
+            color = colorsel[sel];
         }
 
         public bool isLampOn() { return isON; }
