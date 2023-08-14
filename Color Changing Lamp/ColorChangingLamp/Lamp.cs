@@ -27,10 +27,10 @@ namespace ColorChangingLamp
             if (!isLampOn())
             {
                 isON = true;
+                color = colorsel[sel];
+                sel++;
+                if (sel == 3) { sel = 0; }
             }
-            color = colorsel[sel];
-            sel++;
-            if (sel == 3) { sel = 0; }
         }
 
         public void TurnOff()
