@@ -36,13 +36,14 @@ class RandomList
         bool flag = false;//to see if [low < high]
         //randomList = new List<int>();
         Random rnd = new Random(seed);//generate random numbers with given seed
+        
         if (low < high)
         {
             flag = true;
             for (int i = 0; i <n; i++)
             {
-                int t = rnd.Next(low, high);
-                randomArray[i] = t;//store numbers in array
+                randomArray[i] = rnd.Next(low, high);//store numbers in array
+                //int t = rnd.Next(low,high);
                 //randomList.Add(t);
             }
             return flag;
@@ -68,9 +69,10 @@ class RandomList
     public float Mean()
     {
         float ave = 0;
-        for(int i = 0;i < randomArray.Length;i++)
+        float len = randomArray.Length;
+        for (int i = 0;i < len;i++)
         {
-            ave += randomArray[i] / randomArray.Length;
+            ave += randomArray[i] / len;
         }
         /*for (int i = 0; i < randomList.Count; i++)
         {

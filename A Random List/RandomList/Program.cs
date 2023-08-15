@@ -34,7 +34,7 @@ while (true)
         X.Seed = seed;
         X.Generate(n, low, high);
         X.Show();
-        Console.WriteLine("The average value of the random number array is: " + X.Mean());
+        Console.WriteLine("The average value of the random number array is: {0:0.00}",X.Mean());
         Console.WriteLine("The seed of the random array is: " + X.Seed);
         Console.WriteLine();
     }
