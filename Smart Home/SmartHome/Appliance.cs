@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace SmartHome
 {
+    delegate string StringOps();
+
     abstract class Appliance : IHealthChecker
     {
         private int useTimes;
@@ -43,7 +45,6 @@ namespace SmartHome
             if (!isOn)
             {
                 isOn = true;
-                useTimes++;
                 return true;
             }
             else { return false; }
@@ -72,9 +73,12 @@ namespace SmartHome
 
         public abstract string GetTypes();
 
-        public void HealthCheck(string name, int time, string type)
+        public void HealthCheck()
         {
             bool flag = true;
+            string name = GetName();
+            int time = GetUseTimes();
+            string type = GetTypes();
 
             if (time <= 15) { flag = true; }
             else if (time > 15 && time <= 20)

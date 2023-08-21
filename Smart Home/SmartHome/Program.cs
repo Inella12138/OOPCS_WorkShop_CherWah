@@ -20,7 +20,7 @@ namespace SmartHome
                 living.TurnOn();
                 living.TurnOff();
             }
-            for (int i = 0;i < 7;i++) 
+            for (int i = 0;i < 17;i++) 
             {
                 master.TurnOn();
                 master.TurnOff();
@@ -30,16 +30,16 @@ namespace SmartHome
                 study.TurnOn();
                 study.TurnOff();
             }
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 28; i++)
             {
                 fridge.TurnOn();
                 fridge.TurnOff();
             }
 
-            living.HealthCheck(living.GetName(), living.GetUseTimes(), living.GetTypes());
-            study.HealthCheck(study.GetName(), study.GetUseTimes(), study.GetTypes());
-            master.HealthCheck(master.GetName(), master.GetUseTimes(), master.GetTypes());
-            fridge.HealthCheck(fridge.GetName(), fridge.GetUseTimes(), fridge.GetTypes());
+            living.HealthCheck();
+            study.HealthCheck();
+            master.HealthCheck();
+            fridge.HealthCheck();
         }
     }
 }

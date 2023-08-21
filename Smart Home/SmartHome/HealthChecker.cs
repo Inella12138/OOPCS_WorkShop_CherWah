@@ -12,7 +12,7 @@ namespace SmartHome
         string GetName();
         string GetTypes();
 
-        void HealthCheck(string name, int time, string type);
+        void HealthCheck();
         
     }
 
