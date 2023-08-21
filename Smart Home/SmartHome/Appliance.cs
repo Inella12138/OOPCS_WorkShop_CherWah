@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace SmartHome
 {
-    delegate string StringOps();
-
     abstract class Appliance : IHealthChecker
     {
         private int useTimes;
